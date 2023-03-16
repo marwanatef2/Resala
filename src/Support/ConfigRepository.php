@@ -79,6 +79,7 @@ final class ConfigRepository implements ArrayAccess
         return $this->has($offset);
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->get($offset);
