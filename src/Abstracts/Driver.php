@@ -5,6 +5,8 @@ use RobustTools\Resala\Contracts\SMSDriverInterface;
 
 abstract class Driver implements SMSDriverInterface
 {
+    protected string $senderName;
+
     abstract public function __construct(array $config);
 
     /**
@@ -16,6 +18,11 @@ abstract class Driver implements SMSDriverInterface
     public function toMultiple($recipients): bool
     {
         return is_array($recipients);
+    }
+
+    public function senderName(string $senderName): string
+    {
+        return $this->senderName = $senderName;
     }
 
     /**

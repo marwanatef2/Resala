@@ -19,8 +19,6 @@ final class InfobipDriver extends Driver implements SMSDriverInterface
 
     private string $password;
 
-    private string $senderName;
-
     private string $endPoint;
 
     public function __construct(array $config)

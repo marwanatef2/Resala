@@ -13,5 +13,7 @@ interface SMSDriverInterface
 
     public function message(string $message): string;
 
+    public function senderName(string $senderName): string;
+
     public function send(): SMSDriverResponseInterface;
 }

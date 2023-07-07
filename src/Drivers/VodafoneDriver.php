@@ -16,8 +16,6 @@ final class VodafoneDriver extends Driver implements SMSDriverInterface
 
     private string $password;
 
-    private string $senderName;
-
     private string $secureHash;
 
     private string $endPoint;

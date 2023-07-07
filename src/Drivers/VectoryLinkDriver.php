@@ -19,8 +19,6 @@ final class VectoryLinkDriver extends Driver implements SMSDriverInterface
 
     private string $password;
 
-    private string $senderName;
-
     private string $endPoint;
 
     private string $lang;

@@ -34,6 +34,13 @@ final class SMS
         return $this;
     }
 
+    public function senderName(string $senderName): self
+    {
+        $this->driver->senderName($senderName);
+
+        return $this;
+    }
+
     public function send(): SMSDriverResponseInterface
     {
         return $this->driver->send();

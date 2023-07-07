@@ -19,8 +19,6 @@ final class ConnekioDriver extends Driver implements SMSDriverInterface
     /** @var string|array */
     private $recipients;
 
-    private string $senderName;
-
     private string $singleSmsEndPoint;
 
     private string $batchSmsEndPoint;
@@ -47,6 +45,11 @@ final class ConnekioDriver extends Driver implements SMSDriverInterface
     public function message(string $message): string
     {
         return $this->message = $message;
+    }
+
+    public function senderName(string $senderName): string
+    {
+        return $this->senderName = $senderName;
     }
 
     public function send(): SMSDriverResponseInterface
