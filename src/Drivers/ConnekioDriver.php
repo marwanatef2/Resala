@@ -82,7 +82,7 @@ final class ConnekioDriver extends Driver implements SMSServiceProviderDriverInt
     public function payload(): string
     {
         if (!$this->isSendingToMultipleRecipients($this->recipients)) {
-            json_encode([
+            return json_encode([
                 "account_id" => $this->accountId,
                 "text" => $this->message,
                 "msisdn" => $this->recipients,
